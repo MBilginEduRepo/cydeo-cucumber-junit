@@ -11,14 +11,19 @@ In the class we will be able to pass pre- & pos- conditions to each scenario and
 public class Hooks {
 
     //import from io.cucumber.java not from junit
-    @Before
+    @Before (order = 1)
     public void setupScenario(){
         System.out.println("===Setting up browser using cucumber @Before");
     }
 
-    @Before ("@login")
+    @Before (value = "@login", order = 2)
     public void setupScenarioForLogins(){
-        System.out.println("===Setting up browser using cucumber @Before");
+        System.out.println("===this will only apply to scenarios with @login tag");
+    }
+
+    @Before (value = "@db", order = 0)
+    public void setupForDatabaseScenarios(){
+        System.out.println("===this will only apply to scenarios with @db tag");
     }
 
     @After
