@@ -23,3 +23,11 @@ Feature: Wikipedia search functionality and verifications
     Then User sees "<expectedMainHeader>" is in the main header
 
     Examples: search values we are going to be using in this scenario is as below
+      | searcValue        | expectedTitle     | expectedMainHeader |
+      | Cristiano Ronaldo | Cristiano Ronaldo | Cristiano Ronaldo  |
+      | Bob Marley        | Bob Marley        | Bob Marley         |
+      | Chuck Norris      | Chuck Norris      | Chuck Norris       |
+      | Antony Hopkins    | Antony Hopkins    | Antony Hopkins     |
+      | Marie Curie       | Marie Curie       | Marie Curie        |
+      | Lady Gaga         | Lady Gaga         | Lady Gaga          |
+      | Kate Winslet      | Kate Winslet      | Kate Winslet       |
